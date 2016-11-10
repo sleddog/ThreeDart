@@ -1,0 +1,20 @@
+part of ThreeDart.Scenes;
+
+/// The render pass renders a single scene.
+abstract class RenderPass extends Scene {
+
+  /// The camera describing the view of the scene.
+  Views.Camera get camera;
+  set camera(Views.Camera camera);
+
+  /// The target defining the storage to render to.
+  Views.Target get target;
+  set target(Views.Target target);
+
+  /// The default technique to render with.
+  Techniques.Technique get tech;
+  set tech(Techniques.Technique tech);
+
+  /// Event emitted on an redner for this pass.
+  Core.Event get onRender;
+}
